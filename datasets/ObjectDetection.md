@@ -49,13 +49,10 @@ another link
 - **VEDAI**<br>
 **Categories**:9 different classes of vehicles, includs ‘plane’, ‘boat’, ‘camping car’, ‘car’, ‘pick-up’,‘tractor’, ‘truck’,‘van’, and the ‘other’.<br>
 **Description**:<br>
-<br>
 **Reference**:<br>
-<br>
 - **UCAS-AOD**<br>
 **Categories**:<br>
 **Description**:<br>
-<br>
 **Reference**:<br>
 Zhu, H., Chen, X., Dai, W., Fu, K., Ye, Q., Jiao, J., 2015. Orientation robust object detection in aerial images using deep convolutional neural network, in: 2015 IEEE International Conference on Image Processing (ICIP), IEEE. pp. 3735–3739.<br>
 - **DLR 3K Vehicle**<br>
