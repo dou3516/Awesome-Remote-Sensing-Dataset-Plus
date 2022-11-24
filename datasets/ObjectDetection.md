@@ -3,6 +3,16 @@
 # 1. Overview
 This repo ...
 
+## Categories
+- general facilities<br>
+- special facilities
+- general targets
+- special targets
+
+## Image sources
+- space-based
+- air-based
+
 ## Annotation types
 General annotation types includes: Horizontal B-Box(HBB), Oriented B-Box(OBB), instance segmentation, diamond style, key point<br>
 - Horizontal B-Box(HBB)<br>
