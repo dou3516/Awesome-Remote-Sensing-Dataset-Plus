@@ -3,15 +3,24 @@
 # 1. Overview
 This repo ...
 
-## Categories
-- general facilities<br>
+## Typical categories
+- general facilities:<br>
 - special facilities
 - general targets
 - special targets
 
 ## Image sources
-- space-based
-- air-based
+- Optical (MSS)
+  - space-based<br>
+    - Google Earth: ~level 15 - level 20 <br>
+    - worldview: ~ 0.3m - *
+    - GaoFen: ~ 0.6m - 50m
+    - ...
+  - air-based
+- Imaging radar (SAR)
+  - space-based
+  - air-based
+- Non imaging radar
 
 ## Annotation types
 General annotation types includes: Horizontal B-Box(HBB), Oriented B-Box(OBB), instance segmentation, diamond style, key point<br>
