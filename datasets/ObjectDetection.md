@@ -28,25 +28,25 @@ This repo briefly introduced the targets, images, annotations, popular benchmark
 ## Annotation types
 General annotation types includes: Horizontal B-Box(HBB), Oriented B-Box(OBB), instance segmentation, diamond style, CEDAI, key point, and so on.<br>
 - **Horizontal B-Box(HBB)**<br>
-  - (xmin, ymin, xmax, ymax)
+  - (xmin, ymin, xmax, ymax)<br>
     ![HBB_xyxy](../images/HBB_xyxy.png)<br>
-  - (xcenter, ycenter, width, height)
+  - (xcenter, ycenter, width, height)<br>
     ![HBB_xywh](../images/HBB_xywh.png)<br>
   - ...
 - **Oriented B-Box(OBB)**<br>
-  - (xcenter, ycenter, width, height, angle)
+  - (xcenter, ycenter, width, height, angle)<br>
     ![OBB_xywha](../images/OBB_xywha.png)<br>
-  - (x1, y1, x2, y2, x3, y3, x4, y4)
+  - (x1, y1, x2, y2, x3, y3, x4, y4)<br>
     ![OBB_xy4](../images/OBB_xy4.png)<br>
   - ...
 - **instance segmentation**<br>
   - ...
 - **diamond style**<br>
-    Used in RarePlane dataset. Each aircraft is labeled in a diamond style with annotators instructed to label the nose, left-wing, tail, and right-wing in order. This annotation style has the advantage of being simplistic, easily reproducible, convertible to a bounding box, and ensures that aircraft are consistently annotated as other formats can often lead to imprecise labeling. Furthermore, this annotation style enables us to pull out two valuable features of aircraft: Their length and wingspan.
+    Used in RarePlane dataset. Each aircraft is labeled in a diamond style with annotators instructed to label the nose, left-wing, tail, and right-wing in order. This annotation style has the advantage of being simplistic, easily reproducible, convertible to a bounding box, and ensures that aircraft are consistently annotated as other formats can often lead to imprecise labeling. Furthermore, this annotation style enables us to pull out two valuable features of aircraft: Their length and wingspan.<br>
     ![diamond style](https://www.cosmiqworks.org/wp-content/uploads/2020/04/1_gif.gif)<br>
 
 - **VEDAI**<br>
-  Used in VEDAI dataset. The annotation contains the image ID, the coordinates of the center in the image, the orientation of the vehicle, the 4 coordinates of the 4 corners, the class name, a flag stating if the target is entirely contained in the image, a flag stating if the vehicle is occluded.
+  Used in VEDAI dataset. The annotation contains the image ID, the coordinates of the center in the image, the orientation of the vehicle, the 4 coordinates of the 4 corners, the class name, a flag stating if the target is entirely contained in the image, a flag stating if the vehicle is occluded.<br>
   ![VEDAI](../images/VEDAI.png)<br>
   ![VEDAI_annotation](../images/VEDAI_annotation.png)<br>
 
