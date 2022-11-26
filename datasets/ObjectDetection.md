@@ -29,26 +29,26 @@ This repo briefly introduced the targets, images, annotations, popular benchmark
 General annotation types includes: Horizontal B-Box(HBB), Oriented B-Box(OBB), instance segmentation, diamond style, CEDAI, key point, and so on.<br>
 - **Horizontal B-Box(HBB)**<br>
   - (xmin, ymin, xmax, ymax)
-    ![HBB_xyxy](../images/HBB_xyxy.png#pic_center)
+    ![HBB_xyxy](../images/HBB_xyxy.png)<br>
   - (xcenter, ycenter, width, height)
-    ![HBB_xywh](../images/HBB_xywh.png#pic_center)
+    ![HBB_xywh](../images/HBB_xywh.png)<br>
   - ...
 - **Oriented B-Box(OBB)**<br>
   - (xcenter, ycenter, width, height, angle)
-    ![OBB_xywha](../images/OBB_xywha.png#pic_center)
+    ![OBB_xywha](../images/OBB_xywha.png)<br>
   - (x1, y1, x2, y2, x3, y3, x4, y4)
-    ![OBB_xy4](../images/OBB_xy4.png#pic_center)
+    ![OBB_xy4](../images/OBB_xy4.png)<br>
   - ...
 - **instance segmentation**<br>
   - ...
 - **diamond style**<br>
     Used in RarePlane dataset. Each aircraft is labeled in a diamond style with annotators instructed to label the nose, left-wing, tail, and right-wing in order. This annotation style has the advantage of being simplistic, easily reproducible, convertible to a bounding box, and ensures that aircraft are consistently annotated as other formats can often lead to imprecise labeling. Furthermore, this annotation style enables us to pull out two valuable features of aircraft: Their length and wingspan.
-    ![diamond style](https://www.cosmiqworks.org/wp-content/uploads/2020/04/1_gif.gif#pic_center)
+    ![diamond style](https://www.cosmiqworks.org/wp-content/uploads/2020/04/1_gif.gif)<br>
 
 - **VEDAI**<br>
   Used in VEDAI dataset. The annotation contains the image ID, the coordinates of the center in the image, the orientation of the vehicle, the 4 coordinates of the 4 corners, the class name, a flag stating if the target is entirely contained in the image, a flag stating if the vehicle is occluded.
-  ![VEDAI](../images/VEDAI.png#pic_center)
-  ![VEDAI_annotation](../images/VEDAI_annotation.png#pic_center)
+  ![VEDAI](../images/VEDAI.png)<br>
+  ![VEDAI_annotation](../images/VEDAI_annotation.png)<br>
 
 # 2. Benchmarks and contests
 ## Popular benchmarks
@@ -92,7 +92,7 @@ TODO
 - [**SaRNet: Satellite Imagery for Search And Rescue Dataset**](https://github.com/michaelthoreau/SearchAndRescueNet)<br>
 **Categories**:target<br>
 **Description**:This is a single class dataset consisting of tiles of satellite imagery labeled with potential 'targets'. Labelers were instructed to draw boxes around anything they suspect may a paraglider wing, missing in a remote area of Nevada. Volunteers were shown examples of similar objects already in the environment for comparison. The missing wing, as it was found after 3 weeks, is shown below.<br>
-![SaRNet](https://camo.githubusercontent.com/30b03d6ae846b1077d27ba3d177fe85c4d74dd038d289850799ecc5e31b4bae5/68747470733a2f2f6d69636861656c747075626c69632e73332e616d617a6f6e6177732e636f6d2f696d616765732f616e6f6d616c795f736d616c6c2e6a7067#pic_center)
+![SaRNet](https://camo.githubusercontent.com/30b03d6ae846b1077d27ba3d177fe85c4d74dd038d289850799ecc5e31b4bae5/68747470733a2f2f6d69636861656c747075626c69632e73332e616d617a6f6e6177732e636f6d2f696d616765732f616e6f6d616c795f736d616c6c2e6a7067)<br>
 **Reference**:<br>
 [SaRNet: A Dataset for Deep Learning Assisted Search and Rescue with Satellite Imagery](https://arxiv.org/pdf/2107.12469.pdf)<br>
 [Download link](https://michaeltpublic.s3.amazonaws.com/sarnet.zip)<br>
