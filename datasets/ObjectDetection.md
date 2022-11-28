@@ -86,6 +86,7 @@ TODO
 | DIOR        | 20      | 23463    | 800           | 192,518     | HBB,OBB  | Google Earth      | 2022  | yes | |
 | DOTA-2.0    | 18      | 11,268   | 800-20000     | 1,793,658   | OBB,HBB  | Google Earth, GF2, JL1| 2021  | yes |  |
 | SaRNet       | 1       | 2552     | 1000         | 4206        | HBB  | ~ 0.5m                | 2021  | yes | |
+| VISO       | 1       | 15455    | 12000*5000   | 853911      | HBB  | JiLin-1               | 2020  | yes | video for tracking |
 | RarePlanes  |10 attributes| 253      |    512        | 14700   | diamond |WorldView3 0.31,1.24m| 2020 | yes | |
 | xView       | 60      | 1128     | 2000-4000     | ~1,000,000  | HBB  | 0.3m                   | 2018 | yes | |
 | NWPU VHR-10 | 10      | 800      | ~1000         | 3775        | HBB  | Google Earth           | 2016 |yes | |
@@ -141,6 +142,13 @@ DOTA-v2.0: plane, ship, storage tank, baseball diamond, tennis court, basketball
 [Download link](https://michaeltpublic.s3.amazonaws.com/sarnet.zip)<br>
 
 ### 2020
+
+- [**VISO (VIdeo Satellite Objects)**](https://github.com/QingyongHu/VISO)<br>
+**Categories**: plane, car, ship, and train<br>
+**Description**: This dataset is a large-scale dataset for moving object detection and tracking in satellite videos, which consists of 40 satellite videos captured by Jilin-1 satellite platforms. Each image has a resolution of 12000x5000 and contains a great number of objects with different scales. Four common types of vechicles, including plane, car, ship, and train, are manually-labeled. A total of 853,911 instances are labeled by axis-aligned bounding boxes.<br>
+**Reference**:<br>
+Detecting and Tracking Small and Dense Moving Objects in Satellite Videos: A Benchmark<br>
+Download link [Google Drive](https://drive.google.com/file/d/11G0pqEMletzPtueGbgD-Pq9stQAcvpWw/view?usp=sharing) [BaiduYun](https://pan.baidu.com/s/1N7PocwTZC9SEA0fEymPOPA)(Sharing code: viso)<br>
 
 - [**RarePlanes**](https://www.cosmiqworks.org/rareplanes-public-user-guide/)<br>
 **Categories**:10 fine grain attributes including: aircraft length, wingspan, wing-shape, wing-position, FAA wingspan class, propulsion, number of engines, number of vertical-stabilizers, if it has canards, and aircraft role.<br>
