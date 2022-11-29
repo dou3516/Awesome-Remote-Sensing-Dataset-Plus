@@ -79,7 +79,7 @@ General annotation types includes: Horizontal B-Box(HBB), Oriented B-Box(OBB), i
   
 
 # 2. Benchmarks and contests
-## Popular benchmarks
+## Popular benchmarks with paper and code
 - **DOTA**<br>
   - [Datasets](https://captain-whu.github.io/DOTA/dataset.html)<br>
   - [Tasks](https://captain-whu.github.io/DOTA/evaluation.html)<br>
