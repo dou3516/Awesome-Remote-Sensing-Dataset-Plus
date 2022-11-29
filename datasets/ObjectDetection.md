@@ -83,6 +83,8 @@ General annotation types includes: Horizontal B-Box(HBB), Oriented B-Box(OBB), i
 - **DOTA**<br>
   - [Datasets](https://captain-whu.github.io/DOTA/dataset.html)<br>
   - [Tasks](https://captain-whu.github.io/DOTA/evaluation.html)<br>
+  - Paper with code
+    - [DOTA-1.0](https://paperswithcode.com/sota/object-detection-in-aerial-images-on-dota-1)
 - **FAIR1M**
   - [Datasets](https://www.gaofen-challenge.com/benchmark) <br>
   - [Tasks](https://www.gaofen-challenge.com/benchmark) <br>
