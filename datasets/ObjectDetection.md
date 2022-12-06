@@ -9,9 +9,9 @@
   - [Popular benchmarks with paper and code](#popular-benchmarks-with-paper-and-code)
   - [Hot contests with solution](#hot-contests-with-solution)
 - [3. Datasets by category](#3-datasets-by-category)
-  - [1. ship (TODO)](#1-ship-todo)
+  - [1. ship](#1-ship)
     - [Optical](#optical)
-    - [SAR](#sar)
+    - [SAR (TODO)](#sar-todo)
 - [3. Datasets by year: Public datasets](#3-datasets-by-year-public-datasets)
   - [Optical](#optical-1)
     - [Multi-class](#multi-class)
@@ -26,10 +26,14 @@
       - [2020](#2020-1)
       - [2018](#2018-1)
       - [2016](#2016-1)
-  - [SAR](#sar-1)
+  - [SAR](#sar)
+    - [Multi-class](#multi-class-1)
+    - [Single class: ship](#single-class-ship-1)
       - [2022](#2022-1)
       - [2021](#2021-2)
       - [2020](#2020-2)
+      - [2019](#2019)
+      - [2017](#2017)
   - [Multi-Modal](#multi-modal)
 - [4. Private datasets (limited usage license)](#4-private-datasets-limited-usage-license)
 - [5. Dataset tools](#5-dataset-tools)
@@ -101,7 +105,7 @@ General annotation types includes: Horizontal B-Box(HBB), Oriented B-Box(OBB), i
 TODO
 
 # 3. Datasets by category
-## 1. ship (TODO)
+## 1. ship 
 ### Optical
 - **OBB**
   - in multi-class<br>
@@ -132,9 +136,11 @@ TODO
     - AirbusShip
     - HRSC2016
   
-### SAR
+### SAR (TODO)
 - **BB**
   - xView3-SAR
+  - CEMEE2022
+  - RSDD-SAR
   - SRSDD-v1.0
   - DSSDD
   - SSDD
@@ -142,6 +148,8 @@ TODO
   - FUSAR-Ship
   - LS-SSDD-v1.0
   - HRSID
+  - SAR-Ship-Dataset
+  - OpenSARShip-2.0
   - ...
 
 # 3. Datasets by year: Public datasets
@@ -430,18 +438,30 @@ na: no annotation
 
 
 ## SAR
+### Multi-class
+
+| Dataset     | Categories | Images | Image width | Instances | Annotation |   Source    | Year | Available | remarks |
+|:-----------:|:-------:|:--------:|:-------------:|:-----------:|:--------------:|:-----------:|:-----:|:----:|:-----------------:|
+
+
+
+
+### Single class: ship
 
 | Dataset     | Categories | Images | Image width | Instances | Annotation |   Source    | Year | Available | remarks |
 |:-----------:|:-------:|:--------:|:-------------:|:-----------:|:--------------:|:-----------:|:-----:|:----:|:-----------------:|
 | xView3-SAR      | 1       | 991      |  -    | 220,000+ | HBB  | Sentinel-1,20m | 2022  | yes |  |
+|CEMEE2022 Challenge| 7       | 1000     |  1024 | -        | OBB  | -              | 2022  | yes | register for data |
+| RSDD-SAR        | 1       | 7000     |  512  | 10263    | OBB  | GF-3, TerraSAR-X | 2022  | yes |  |
 | SRSDD-v1.0      | 6       | 666      |  1024 | 2884     | OBB  | GaoFen-3,1m    | 2021  | yes | x1,y1,...x4,y4 |
-| DSSDD           | 1       | 1236     |  256  | 3540     |HBB,OBB| Sentinel-1   | 2021  | yes | cx,cy,w,h,angle |
-| SSDD            | 1       | 1160     |  500  | 2358     |HBB,OBB| RadarSat-2, TerraSAR-X,Sentinel-1 | 2021  | yes |  |
+| DSSDD           | 1       | 1236     |  256  | 3540     |HBB,OBB| Sentinel-1   | 2021  | yes | cx,cy,w,h,angle, VV,VH |
+| SSDD2021        | 1       | 1160     |  500  | 2358     |HBB,OBB| RadarSat-2, TerraSAR-X,Sentinel-1, 1-15m | 2021  | yes |  |
 | AIR-SARShip-2.0 | 1       | 300      |  1000 | -        | HBB  | GaoFen3 1m,3m | 2020  | yes | 1-channel, 16-bit |
-| FUSAR-Ship Dataset v1.0|98| 5000     |  512  | 2358     | -    | GaoFen-3    | 2020  | yes |  |
-| LS-SSDD-v1.0    | 1       | ~9000    |  800  | -        | -    | Sentinel-1   | 2020  | yes |  |
-| HRSID          | 1       | 5604      |  800  | 16951    | -    | Sentinel-1B imageries, 36 TerraSAR-X and 1 TanDEM-X, 0.5,1,3m     | 2020  | yes |  |
-| LS-SSDD-v1.0    | 1       | ~9000    |  800  | -        | -    | Sentinel-1   | 2020  | yes |  |
+| FUSAR-Ship Dataset v1.0|98| 6358     |  512  | ~5000    | -    | GaoFen-3    | 2020  | yes |  |
+| LS-SSDD-v1.0    | 1       | ~9000    |  800  | -        | HBB  | Sentinel-1   | 2020  | yes |  |
+| HRSID          | 1       | 5604      |  800  | 16951    |HBB,IS| Sentinel-1B imageries, 36 TerraSAR-X and 1 TanDEM-X, 0.5,1,3m     | 2020  | yes | with instance segmentation |
+| SAR-Ship-Dataset| 1       | 43819    |  256  | 59535    | HBB  | Sentinel-1, GaoFen-3 3-25m | 2019  | yes | x,y,w,h |
+| OpenSARship-2.0 | 1       | 34528    | 30-120| -        |HBB,OBB| Sentinel-1 3-22m | 2017  | yes | with AIS message |
 
 #### 2022
 - **xView3-SAR**<br>
@@ -456,6 +476,24 @@ na: no annotation
   - **Reference**:<br>
   [xView3-SAR: Detecting Dark Fishing Activity Using Synthetic Aperture Radar Imagery](https://arxiv.org/abs/2206.00897)<br>
   - [Download link](https://iuu.xview.us/)<br>
+
+- **CEMEE2022 Challenge**<br>
+  - **Categories**: 7, S1 to S7<br>
+  - **Description**:<br>
+    - register for challenge and dataset
+    - labeled as x1 y1 x2 y2 x3 y3 x4 y4
+  - **Reference**:<br>
+  - [Download link](http://cemee.org.cn/#/customer/match/893eb51e-d665-45d5-ad94-c164307bdb57)<br>
+
+- [**RSDD-SAR (Rotated Ship Detection Dataset in SAR Images)**](https://radars.ac.cn/web/data/getData?dataType=SDD-SAR_en&pageType=en)<br>
+  - **Categories**:<br>
+  - **Description**:<br>
+    - [RSDD-SAR Dataset Instruction](https://radars.ac.cn/fileLDXB/cms/news/info/2022/07/af9ec429bab44aa49d5e506c54b98283/RSDD-SAR%20Dataset%20Instructions.pdf)
+    - Rotated Ship Detection Dataset in SAR Images (RSDD-SAR) was built based on the domestic GF-3 satellite and the ESA TerraSAR-X satellite. This dataset consists of 84 scenes GF-3 data slices, 41 scenes TerraSAR-X data slices, and 2 scenes uncropped large images, includes 7,000 slices and 10,263 ship instances of multi-observing modes, multi-polarization modes and multi-resolutions, and has the characteristics of arbitrary rotation direction, large aspect ratio, high proportion of small targets and rich in scenarios. Figure.1 shows an example of the typical scenarios in RSDD-SAR.
+    - The size of slice in RSDD-SAR is unified to 512×512 pixels, the format of slice is a 3-channel, 24-bit, grayscale .JPG images, and the annotation of slice is a .XML format file. The annotation file records the polarization mode, resolution, rotated bounding box annotation and other information. The rotated bounding box annotation adopts the long-edge definition method, including the center point coordinate, long edge, short edge, and angle. For an example of the annotation file, see the ‘RSDD-SAR Dataset Instructions’. 2 scenes uncropped images and their annotations are the same as the slice.
+  - **Reference**:<br>
+  [XU Congan, SU Hang, LI Jianwei, et al. RSDD-SAR: Rotated ship detection dataset in SAR images[J]. Journal of Radars, in press. doi: 10.12000/JR22007.](https://radars.ac.cn/en/article/doi/10.12000/JR22007)<br>
+  - [Download link](https://radars.ac.cn/web/data/getData?dataType=SDD-SAR_en&pageType=en)<br>
 
 #### 2021
 - **SRSDD-v1.0 (SAR Rotation Ship Detection Dataset)**<br>
@@ -481,17 +519,121 @@ na: no annotation
 - **DSSDD (Dual-polarimetric SAR Ship Detection Dataset)**<br>
   - **Categories**:<br>
   - **Description**:<br>
+   - The specific dataset contains 50 dual-polarimetric SAR images from Sentinel-1.
+   - The above images were cropped to 1236 image slices with the size of 256x256 pixels.
+   - These 1236 images have VV and VH polarizations which were then fused into R,G,B channels for the creation of the pseudo-color image.
+   - The colour depth of the images (.png) is 8 bits/channel.
+   - The 16-bit original images (.tif) are also provided.
+   - This dataset includes 3540 ship instances.
+   - Each ship was labeled with both a rotatable bounding box (RBox) and a horizontal bounding box (BBox).
+   - Each image slice has a corresponding XML format annotation file, indicating the slice size, slice name, and annotation type:
+   - The RBox label is tagged as “robndbox”, where "cx", "cy", "w", "h", and "angle" indicate the center coordinates, height, width, and angle of a box, respectively.
+   - Correspondingly, the BBox label is tagged as "bndbox", where "xmin", "xmax", "ymin", "ymax" refer to the top left corner and the lower right corner coordinates of a box, respectively.
   - **Reference**:<br>
-  []()<br>
-  - [Download link]()<br>
+  [A Dual-Polarimetric SAR Ship Detection Dataset and a Memory-Augmented Autoencoder-Based Detection Method](https://www.mdpi.com/1424-8220/21/24/8478)<br>
+  - [Download link](https://github.com/liyiniiecas/A_Dual-polarimetric_SAR_Ship_Detection_Dataset)<br>
+
+- **SSDD2021 (SAR Ship Detection Dataset)**<br>
+  - **Categories**: ship<br>
+  - **Description**:<br>
+    - It consists of 1160 SAR images with dimensions of 500×350 pixels.
+    - This specific dataset includes 2358 ship instances.
+    - The spatial resolutions of SAR images are from 1 to 15 meters per pixel.
+    - These 1160 images were obtained from RadarSat-2, TerraSAR-X and Sentinel-1 satellites.
+    - The above 1160 images is are in .jpeg format with 24 bit color depth.
+    - Dataset images have mixed HH, HV, VV, and VH polarizations.
+    - In the new version of SSDD, three kinds of annotational information are provided:
+      - Horizontal bounding box.
+      - Rotated bounding box.
+      - Pixel-based segmentation.
+    - The above annotations are in Pascal VOC and MS COCO dataset formats, except of rotated bounding boxes, which are only available on Pascal VOC format.
+  - **Reference**:<br>
+  [SAR Ship Detection Dataset (SSDD): Official Release and Comprehensive Data Analysis](https://www.mdpi.com/2072-4292/13/18/3690)<br>
+  - [Download link](https://drive.google.com/file/d/1glNJUGotrbEyk43twwB9556AdngJsynZ/view?usp=sharing)<br>
 
 #### 2020
 - [**AIR-SARShip-2.0**](https://radars.ac.cn/web/data/getData?dataType=SARDataset_en&pageType=en)<br>
-**Categories**: ship<br>
-**Description**: High-resolution SAR ship objection detection dataset-2.0 (AIR-SARShip-2.0) releases 300 images. The resolution of images includes 1m and 3m, imaging mode covers both spotlight and strip, and polarization is single polarization. The scene type includes ports, islands and reefs, and seas of different grades. The target contains thousands ships with more than ten categories such as transport vessels, oil tankers and fishing boats.<br>
-**Reference**:<br>
+  - **Categories**: ship<br>
+  - **Description**: High-resolution SAR ship objection detection dataset-2.0 (AIR-SARShip-2.0) releases 300 images. The resolution of images includes 1m and 3m, imaging mode covers both spotlight and strip, and polarization is single polarization. The scene type includes ports, islands and reefs, and seas of different grades. The target contains thousands ships with more than ten categories such as transport vessels, oil tankers and fishing boats.<br>
+  - **Reference**:<br>
 [Xian Sun, Zhirui Wang, Yuanrui Sun, et al. AIR-SARShip-1.0: High Resolution SAR Ship Detection Dataset[J]. Journal of Radars, in press. doi: 10.12000/JR19097](https://radars.ac.cn/en/article/doi/10.12000/JR19097)<br>
-[Download link](https://radars.ac.cn/web/data/getData?dataType=SARDataset_en&pageType=en)<br>
+  - [Download link](https://radars.ac.cn/web/data/getData?dataType=SARDataset_en&pageType=en)<br>
+
+- **FUSAR-Ship Dataset v1.0**<br>
+  - **Categories**: 15 ship categories, 98 ship subcategories<br>
+  - **Description**:<br>
+    - FUSAR-Ship dataset has a total of 15 ship categories, 98 ship subcategories, consisted of 126 GF-3 scenes covering various scenarios. The imaging mode of those 126 images is ultrafine strip-map (UFS) mode.
+    - It includes over 5000 ship chips with AIS messages and some other types of marine   targets and background clutters.
+    - The above single-band ship images have dimensions of 512 × 512 pixels.
+    - These images are in .tiff format and their color depth is 8 bits.
+    - These image chips are stored under subfolder named after its 'category/subcategory'. The filename of each sample follows the convention: Ship_CxxSyyNzzzz.tiff, where xx is the index of category, yy is the index of subcategory and zzzz is the index of this particular sample.
+    - Dataset images have VV and HH polarizations.
+    - The matchup metadata is compiled in the file 'meta.csv' or 'meta.xls', which follow the format of: id mmsi length width polarMode centerLookAngle heightspace widthspace path.
+  - **Reference**:<br>
+  [FUSAR-Ship: building a high-resolution SAR-AIS matchup dataset of Gaofen-3 for ship detection and recognition](https://link.springer.com/article/10.1007/s11432-019-2772-5)<br>
+  - [Download link](https://emwlab.fudan.edu.cn/resources/)<br>
+
+- **LS-SSDD-v1.0**<br>
+  - **Categories**:<br>
+  - **Description**:<br>
+    - It consists of 15 large-scale SAR images, obtained from Sentinel-1 satellite, with size of 24000 × 16000 pixels.
+    - These 15 large-scale SAR images were cut into 9000 sub-images with dimensions of 800 × 800 pixels.
+    - Every image has a corresponding .xml file which contains one bounding box for each one of image's instances.
+    - Dataset images have VV and VH polarizations.
+  - **Reference**:<br>
+  [LS-SSDD-v1.0: A Deep Learning Dataset Dedicated to Small Ship Detection from Large-Scale Sentinel-1 SAR Images](https://www.mdpi.com/2072-4292/12/18/2997/html)<br>
+  - [Download link](https://github.com/TianwenZhang0825/LS-SSDD-v1.0-OPEN)<br>
+
+- **HRSID**<br>
+  - **Categories**:<br>
+  - **Description**:<br>
+    - The specific dataset contains 116 co-polarized and 20 cross-polarized SAR imageries.
+    - The original imageries for constructing HRSID are 99 Sentinel-1B imageries, 36 TerraSAR-X and 1 TanDEM-X imageries.
+    - The above 136 panoramic SAR imageries cropped to 5604 high-resolution SAR images.
+    - These 5604 images have dimensions of 800 × 800 pixels, resolution of 96 dpi, and there are in .jpeg format.
+    - The colour depth of the images is 8 bits (one channel).
+    - The extracted 5604 high-resolution SAR images contain 16951 ship instances.
+    - The spatial resolutions of SAR images are 0.5, 1 and 3 meters per pixel.
+    - The annotations of each instance are the corresponding bounding box and the ship's outline.
+    - The annotations of each SAR image constitute a .json file in MS COCO dataset format.
+  - **Reference**:<br>
+  [HRSID: A High-Resolution SAR Images Dataset for Ship Detection and Instance Segmentation](https://ieeexplore.ieee.org/abstract/document/9127939)<br>
+  - [Download link](https://github.com/chaozhong2010/HRSID)<br>
+
+#### 2019
+- **SAR-Ship-Dataset**<br>
+  - **Categories**:<br>
+  - **Description**:<br>
+    - It consists of 43819 ship chips of 256 × 256 pixels.
+    - The specific dataset includes 59535 ship instances.
+    - This dataset was created using 102 Chinese Gaofen-3 images and 108 Sentinel-1 images.
+    - For Gaofen-3, the images have spatial resolutions of 3 m, 5 m, 8 m, 10m, and 25 m per pixel, and for Sentinel-1 the spatial resolutions of the images are 1.7 × 4.3 to 3.6 × 4.9 and 20 × 22 meters.
+    - For Gaofen-3 the imaging modes are Ultrafine Strip-Map (UFS), Fine Strip-Map 1 (FSI), Full Polarization 1 (QPSI), Full Polarization 2 (QPSII), and Fine Strip-Map 2 (FSII).
+    - For Sentinel-1, the imaging modes are S3 Strip-Map (SM), S6 SM, and IW-mode.
+    - Each ship chip corresponds to an Extensible Markup Language (XML) file, indicating the ship's location, the ship chip name, and the image shape.
+  - **Reference**:<br>
+  [A SAR Dataset of Ship Detection for Deep Learning under Complex Backgrounds](https://www.mdpi.com/2072-4292/11/7/765)<br>
+  - [Download link](https://github.com/CAESAR-Radi/SAR-Ship-Dataset)<br>
+
+#### 2017
+- **OpenSARShip 2.0**<br>
+  - **Categories**:<br>
+  - **Description**:<br>
+    - OpenSARShip 2.0 consists of 34528 image chips cropped from a total of 87 Sentinel-1 images.
+    - The whole products are in the interferometric wide swath (IW) mode.
+    - The OpenSARShip contains two available products of the IW mode: the single look complex (SLC) and the ground range detected (GRD) products.
+    - These 87 Sentinel-1 images, 52 from GRD and 35 from SLC imageries, are selected from 10 typical intense marine traffic scenes globally in latest years.
+    - For Sentinel-1 the spatial resolutions of the images 2.7 × 22 to 3.6 × 22 and 20 × 22 meters.
+    - Dataset images have mixed VV and VH polarizations.
+    - Each ship image corresponds to an automatic identification system (AIS) message.
+    - The detailed information of each ship chip, containing the AIS messages, the SAR ship signatures, and the messages provided by the MarineTraffic website, is listed in an XML file named Ship.xml
+    - The image sizes range from 30 × 30 to 120 × 120 pixels.
+    - For every Sentinel-1 SAR image, four subfolders provide the different formats of ship chips: original data, visualized data in greyscale, visualized data in pseudo-color, and calibrated data.
+  - **Reference**:<br>
+  [OpenSARShip 2.0: A large-volume dataset for deeper interpretation of ship targets in Sentinel-1 imagery](https://ieeexplore.ieee.org/document/8124929)<br>
+  - [Download link](http://opensar.sjtu.edu.cn)<br>
+
+## Multi-Modal
 
 - **TODO**<br>
   - **Categories**:<br>
@@ -499,8 +641,6 @@ na: no annotation
   - **Reference**:<br>
   []()<br>
   - [Download link]()<br>
-
-## Multi-Modal
 
 # 4. Private datasets (limited usage license)
 TODO<br>
