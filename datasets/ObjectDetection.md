@@ -158,7 +158,7 @@ TODO
 ### Multi-class
 | Dataset     | Categories | Images | Image width | Instances | Annotation |   Source    | Year | Available | remarks |
 |:-----------:|:-------:|:--------:|:-------------:|:-----------:|:--------------:|:-----------:|:-----:|:----:|:--------:|
-| SODA-A      | 9       | 2513     | -             | 872069      | OBB  | -                     | 2022  | no |  |
+| SODA-A      | 9       | 2513     | ~4800*2800    | 872069      | OBB  | -                     | 2022  | yes |  |
 | FAIR1M      | 37      | 15000    | 1000-10000    | ~1,000,000  | OBB  | Google Earth, GF      | 2021  | yes |  |
 | DIOR        | 20      | 23463    | 800           | 192,518     | HBB,OBB  | Google Earth      | 2022  | yes | |
 | DOTA-2.0    | 18      | 11,268   | 800-20000     | 1,793,658   | OBB,HBB  | Google Earth, GF2, JL1| 2021  | yes |  |
