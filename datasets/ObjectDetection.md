@@ -112,7 +112,6 @@ TODO
     - FAIR1M
     - DOTA
     - DIOR: 2702 of the 23463 images contain ~63000 ship instances.
-    - NWPU VHR-10
   - specific<br>
     - ShipRSImageNet
     - FGSD2021
@@ -127,6 +126,7 @@ TODO
     - VISO
     - xView
     - TGRS-HRRSD 
+    - NWPU VHR-10
   - specific<br>
     - ShipRSImageNet
     - S2-SHIPS
@@ -158,7 +158,7 @@ TODO
 ### Multi-class
 | Dataset     | Categories | Images | Image width | Instances | Annotation |   Source    | Year | Available | remarks |
 |:-----------:|:-------:|:--------:|:-------------:|:-----------:|:--------------:|:-----------:|:-----:|:----:|:--------:|
-| SODA-A      | 9       | 2510     | -             | 800203      | OBB  | -                     | 2022  | no | not released now |
+| SODA-A      | 9       | 2513     | -             | 872069      | OBB  | -                     | 2022  | no |  |
 | FAIR1M      | 37      | 15000    | 1000-10000    | ~1,000,000  | OBB  | Google Earth, GF      | 2021  | yes |  |
 | DIOR        | 20      | 23463    | 800           | 192,518     | HBB,OBB  | Google Earth      | 2022  | yes | |
 | DOTA-2.0    | 18      | 11,268   | 800-20000     | 1,793,658   | OBB,HBB  | Google Earth, GF2, JL1| 2021  | yes |  |
@@ -177,13 +177,13 @@ TODO
 #### 2022
 - [**SODA-A (A large-scale Small Object Detection dAtaset)**](https://shaunyuan22.github.io/SODA/)<br>
   - **Categories**: <br>
-  - **Description**: SODA is a large-scale benckmark for Small Object Detection, including SODA-D and SODA-A, which concentrate on Driving and Aerial scenarios respectively. SODA-A comprises 2510 high-resolution images of aerial scenes, which has 800203 instances annotated with oriented rectangle box annotations over 9 classes.<br>
+  - **Description**: SODA is a large-scale benckmark for Small Object Detection, including SODA-D and SODA-A, which concentrate on Driving and Aerial scenarios respectively. SODA-A comprises 2513 high-resolution images of aerial scenes, which has 872069 instances annotated with oriented rectangle box annotations over 9 classes.<br>
   - **Reference**:<br>
 [Towards Large-Scale Small Object Detection: Survey and Benchmarks](https://arxiv.org/abs/2207.14096)<br>
-  - [Download link]()<br>
+  - [Download link](https://shaunyuan22.github.io/SODA/)<br>
 
 - [**FAIR1M**](https://www.gaofen-challenge.com/benchmark)<br>
-  - **Categories**: Boeing 737, Boeing 777, Boeing 747, Boeing 787, Airbus A320, Airbus A220, Airbus A330, Airbus A350, COMAC C919, COMAC ARJ21, other-airplane, passenger ship, motorboat, fishing boat, tugboat, engineering ship, liquid cargo ship, dry cargo ship, warship, other-ship, small car, bus, cargo truck, dump truck, van, trailer, tractor, truck tractor, excavator, other-vehicle, baseball field, basketball court, football field, tennis court, roundabout, intersection, and bridge.<br>
+  - **Categories**: Boeing737, Boeing777, Boeing747, Boeing787, A321, A220, A330, A350, C919, ARJ21, other-airplane, Passenger Ship, Motorboat, Fishing Boat, Tugboat, Engineering Ship, Liquid Cargo Ship, Dry Cargo Ship, Warship, other-ship, Small Car, Bus, Cargo Truck, Dump Truck, Van, Trailer, Tractor, Truck Tractor, Excavator, other-vehicle, Baseball Field, Basketball Court, Football Field, Tennis Court, Roundabout, Intersection, and Bridge.<br>
   - **Description**: FAIR1M-1.0 in 2021, FAIR1M-2.0 in 2022<br>
   - **Reference**:<br>
 [FAIR1M: A Benchmark Dataset for Fine-grained Object Recognition in High-Resolution Remote Sensing Imagery](https://arxiv.org/abs/2103.05569)<br>
@@ -240,6 +240,7 @@ All aircraft sketches are attributable to Wikipedia user Steelpillow: https://co
   - **Description**: 1.0 million Object Instances, 60 Classes, 0.3 meter
 Resolution, 1,415 km2<br>
   - **Reference**:<br>
+  - Download link: [official](https://challenge.xviewdataset.org/data-download) or [BaiduYun with code 7jpo](https://pan.baidu.com/s/1r3jlzIK8uQ-VqfVr4CEgDA)
 
 - **TGRS-HRRSD**<br>
   - **Categories**: 13 categories are: ship, airplane, baseball diamond, basketball court, bridge, crossroad, ground track field, harbor, parking lot, storage tank, T-junction, tennis court and vehicle.<br>
@@ -437,13 +438,26 @@ na: no annotation
   - [Download link]()<br>
 
 
+
 ## SAR
 ### Multi-class
 
 | Dataset     | Categories | Images | Image width | Instances | Annotation |   Source    | Year | Available | remarks |
 |:-----------:|:-------:|:--------:|:-------------:|:-----------:|:--------------:|:-----------:|:-----:|:----:|:-----------------:|
+| MSAR-1.0       | 4       | 28,449  |256,2048| 60,396 | HBB  | HISEA-1 | 2022  | yes |  |
 
-
+- [**MSAR-1.0(Large-scale Multi-class SAR Image Target Detection Dataset-1.0)**](https://radars.ac.cn/web/data/getData?dataType=MSAR_en&pageType=en)<br>
+  - **Categories**: 4, aircraft, oil tank, bridge and ship<br>
+  - **Description**:<br>
+    - The large-scale multi-class SAR image target detection dataset-1.0 (MSAR-1.0) has a total of 28,449 detection slices, and the source data was collected from the HISEA-1 satellite and the Gaofen-3 satellite.
+    - The polarization modes of MSAR-1.0 dataset include HH, HV, VH and VV. The dataset scenarios include airports, ports, inshore, islands, offshore, urban areas, etc. The classes include aircraft, oil tank, bridge and ship, comprising 1,851 bridges, 39,858 ships, 12,319 oil tanks and 6,368 aircrafts. Figure 1 is a few examples of slices from the MSAR-1.0 dataset.
+    - The slice size of MSAR-1.0 dataset is 256*256 pixels, and the slice size of some bridges is 2048*2048 pixels. The format is three-channel gray image and 24-bit depth JPG. The annotation format is XML, and the target class and location information are recorded. The location information consists of Xmin, Xmax, Ymin and Ymax. The label file conforms to the format requirements of mainstream detection networks such as Yolo series, PolarMask, SSD, and Faster-RCNN.
+    - To meet more scientific needs, the MSAR-1.0 dataset provides multiple HISEA-1 images of large scenes, including aircrafts, oil tanks, bridges, ships, airport runway, etc. The annotation format is XML, and the target class and location information are recorded. The location information consists of Xmin, Xmax, Ymin and Ymax. Examples of large scene image label files of MSAR-1.0 dataset are shown in figure 4 and 5 of dataset usage instructions.
+    - For the data set usage instructions, ["Large-scale Multi-class SAR Image Target Detection Dataset-1.0 Usage Instruction"](https://radars.ac.cn/fileLDXB/cms/news/info/2022/05/4b20531fd5714b41b0a7dd6482237e6a/Large-scale%20Multi-class%20SAR%20Image%20Target%20Detection%20Dataset-1.0%20Usage%20Instruction.pdf).
+  - **Reference**:<br>
+  [1] Jie Chen, Zhixiang Huang, Runfan Xia, Bocai Wu, Lei Sheng, Long Sun, Baidong Yao. Large-scale multi-class SAR image target detection dataset-1.0[OL]. Journal of Radars, 2022. https://radars.ac.cn/web/data/getData?dataType=MSAR.<br>
+  [2] Xia, R.; Chen, J.; Huang, Z.; Wan, H.; Wu, B.; Sun, L.; Yao, B.; Xiang, H.; Xing, M. CRTransSar: A Visual Transformer Based on Contextual Joint Representation Learning for SAR Ship Detection. Remote Sensing. 2022, 14, 1488.<br>
+  - [Download link with code: dou3](https://pan.baidu.com/s/1VcVtF6JFd49PcZiu3xfW5A)<br>
 
 
 ### Single class: ship
